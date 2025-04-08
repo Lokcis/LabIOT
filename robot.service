@@ -1,0 +1,14 @@
+[Unit]
+Description=Servicio monitoreo de robot
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /usr/local/bin/robot.sh
+Restart=always
+User=lokcis   
+WorkingDirectory=/usr/local/bin
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
