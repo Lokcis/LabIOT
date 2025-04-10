@@ -59,6 +59,13 @@ body {
     z-index: 1;
 }
 
+#center_button{
+    size: 42px;
+    background-color: yellow;
+    position: absolute;
+    top:50%;
+}
+
 #horizontal_buttons{
     width: 100%;
     height: 55px;
@@ -67,12 +74,28 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 1;
     border-radius: 30px;
 }
 
-.triangles{
+#left_button , #right_button{
+    width: 56px;
+    height: 42px;
+    background-color: darkgray;
     position: absolute;
+}
+
+#left_button{
+    border-radius: 30px 0px 0px 30px;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+}
+
+#right_button{
+    border-radius: 0px 30px 30px 0px;
+    top: 50%;
+    left: 161px;
+    transform: translateY(-50%);
 }
 
 #triangle_leftTop{
