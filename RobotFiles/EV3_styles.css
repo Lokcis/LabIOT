@@ -10,7 +10,6 @@ body {
     width: 382px;
     height: 586px;
     background-color: transparent;
-    border: 1px solid gray;
     position: relative;
 }
 
@@ -23,7 +22,6 @@ body {
     border-radius: 3%;
     top: 2px;
     left: 26px;
-    z-index: 1;
 }
 
 #line_screen_to_buttons{
@@ -31,7 +29,6 @@ body {
     height: 86px;
     background-color: black;
     position:absolute;
-    z-index: 1;
     top: 217px;
     left: 50%;
     transform: translateX(-50%);
@@ -45,7 +42,6 @@ body {
     top: 295px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
 }
 
 #vertical_buttons{
@@ -56,14 +52,16 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 1;
 }
 
 #center_button{
-    size: 42px;
-    background-color: yellow;
+    width: 42px;
+    height: 42px;
+    background-color: gray;
     position: absolute;
     top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 #horizontal_buttons{
@@ -99,29 +97,29 @@ body {
 }
 
 #triangle_leftTop{
-    border-left: 46px solid transparent;
+    border-left: 56px solid transparent;
     border-bottom: 56px solid black;
     position: absolute;
-    left: 39px;
+    left: 29px;
 }
 
 #triangle_leftBottom{
-    border-left: 46px solid transparent;
+    border-left: 56px solid transparent;
     border-top: 56px solid black;
     position: absolute;
-    left: 39px;
+    left: 29px;
     top: 106px;
 }
 
 #triangle_rightTop{
-    border-right: 46px solid transparent;
+    border-right: 56px solid transparent;
     border-bottom: 56px solid black;
     position: absolute;
     left: 139px;
 }
 
 #triangle_rightBottom{
-    border-right: 46px solid transparent;
+    border-right: 56px solid transparent;
     border-top: 56px solid black;
     position: absolute;
     left: 139px;
@@ -146,6 +144,87 @@ body {
     position: absolute;
     border-radius: 3%;
     top: 0px;
+}
+
+#square_base1{
+    height: 42px;
+    width: 50px;
+    position: absolute;
+    background-color: darkgray;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#square_base2{
+    height: 30px;
+    width: 74px;
+    position: absolute;
+    background-color: darkgray;
+    top: 67%;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#triangle_btn_leftBottom{
+    border-right: 25px solid transparent;
+    border-top: 25px solid darkgray;
+    position: absolute;
+    left: 137px;
+    top: 130px;
+}
+
+#triangle_btn_rightBottom{
+    border-left: 25px solid transparent;
+    border-top: 25px solid darkgray;
+    position: absolute;
+    left: 62px;
+    top: 130px;
+}
+
+#triangle_btn_rightTop{
+    border-bottom: 13px solid darkgray;
+    border-right: 13px solid transparent;
+    position: absolute;
+    left: 149px;
+    top: 117px;
+}
+
+#triangle_btn_leftTop{
+    border-bottom: 13px solid darkgray;
+    border-left: 13px solid transparent;
+    position: absolute;
+    left: 62px;
+    top: 117px;
+}
+
+#upline-right{
+    width: 8px;
+    height: 24px;
+    background-color: darkgray;
+    position: absolute;
+    top:85px;
+    left: 141px;
+}
+
+#upline-left{
+    width: 8px;
+    height: 24px;
+    background-color: darkgray;
+    position: absolute;
+    top:85px;
+    left: 75px;
+}
+
+.flipped-button {
+    position: absolute;
+    top: 0px; /* Ajustalo según dónde quieras ponerlo */
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    width: 224px; /* mismo ancho que #back_buttons */
+    height: 162px; /* mismo alto */
+    z-index: 5;
 }
 
 #back_screen{
@@ -179,5 +258,4 @@ body {
     border-radius: 3%;
     top: 100px;
     left: 3px;
-    z-index: 2;
 }
