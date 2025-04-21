@@ -17,7 +17,7 @@ body {
 #base_1{
     width: 326px;
     height: 578px;
-    background-color: whitesmoke;
+    background-color: darkgray;
     border: 1px solid gray;
     position:absolute;
     border-radius: 3%;
@@ -130,7 +130,7 @@ body {
 
 #line_remover{
     width: 326px;
-    height: 560px;
+    height: 520px;
     background-color: whitesmoke;
     position:absolute;
     border-radius: 3%;
