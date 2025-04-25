@@ -1,6 +1,6 @@
 import gi
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, GLib
+from gi.repository import Gtk, GLib, Gdk
 import threading
 
 from ssh_terminal import SSHTerminal
@@ -12,6 +12,16 @@ class Vista(Gtk.Window):
         self.controlador = controlador
         self.default_host = default_host
         self.default_port = default_port
+
+        # Crear un HeaderBar personalizado
+        self.header_bar = Gtk.HeaderBar()
+        self.header_bar.set_title("Cliente SSH")
+        self.header_bar.set_subtitle("Conéctate a tu servidor")
+        self.header_bar.set_show_close_button(True)
+        self.set_titlebar(self.header_bar)
+
+        # Aplicar estilo CSS
+        self.apply_custom_css()
 
         # Caja principal
         self.box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
@@ -132,3 +142,15 @@ class Vista(Gtk.Window):
         except Exception as e:
             print(f"Error al desconectar: {e}")
         Gtk.main_quit()
+
+    def apply_custom_css(self):
+        css_provider = Gtk.CssProvider()
+        css_provider.load_from_data(b"""
+            headerbar {
+                background: #FF0000; /* Rojo */
+            }
+        """)
+        screen = Gdk.Screen.get_default()
+        Gtk.StyleContext.add_provider_for_screen(
+            screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
+        )
