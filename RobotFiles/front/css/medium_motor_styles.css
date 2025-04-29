@@ -1,0 +1,92 @@
+#medium_motor{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    left: 10px;
+    background-color: darkgray;
+    border-radius: 4px;
+}
+
+.medium_motor_lines{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.medium_motor_items{    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: darkgray;
+    border-radius: 15px;
+}
+
+#medium_motor_horizontal {
+    width: 100px;
+    height: 30px;
+}
+
+#medium_motor_vertical {
+    width: 30px;
+    height: 100px;
+}
+
+#medium_motor_line_remover{
+    width: 100px;
+    height: 30px;
+}
+
+.medium_motor_circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(12, 12, 12);
+    border-radius: 50%;  /* Use 50% instead of 100% for circles */
+    transform: translate(-50%, -50%);
+}
+
+/* Horizontal alignment (left/right circles) */
+#medium_motor_circle_left {
+    top: 50%;
+    left: 16%; 
+}
+
+#medium_motor_circle_right {
+    top: 50%;
+    left: 84%;
+}
+
+/* Vertical alignment (top/bottom circles) */
+#medium_motor_circle_top {
+    left: 50%;
+    top: 16%;
+}
+
+#medium_motor_circle_bottom {
+    left: 50%;
+    top: 84%;
+}
+
+#medium_motor_circle_red{
+    left: 50%;
+    top: 50%;
+    background-color: red;
+}
+
+.medium_motor_circle_red_croix{
+    position: absolute;
+    background-color: rgb(12, 12, 12);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#medium_motor_circle_red_horizontal_croix{
+    width: 5px;
+    height: 15px;
+}
+
+#medium_motor_circle_red_vertical_croix{
+    width: 15px;
+    height: 5px;
+}
