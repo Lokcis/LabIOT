@@ -1,0 +1,68 @@
+#touch_sensor{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 120px;
+    left: 10px;
+    background-color: darkgray;
+    border-radius: 4px;
+}
+
+.touch_sensor_square_gray{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: darkgray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 4px;
+}
+
+#touch_sensor_corner_leftTop {
+    top: 22%;
+    left: 22%;
+}
+
+#touch_sensor_corner_rightTop {
+    top: 22%;
+    left: 78%;
+}
+
+#touch_sensor_corner_leftBottom {
+    top: 78%;
+    left: 22%;
+}
+
+#touch_sensor_corner_rightBottom {
+    top: 78%;
+    left: 78%;
+}
+
+#touch_sensor_square_red{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    transform: translate(-50%,-50%);
+}
+
+.touch_sensor_red_square_croix{
+    position: absolute;
+    background-color: rgb(12, 12, 12);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#touch_sensor_red_square_croix_horizontal{
+    width: 5px;
+    height: 15px;
+}
+
+#touch_sensor_red_square_croix_vertical{
+    width: 15px;
+    height: 5px;
+}
