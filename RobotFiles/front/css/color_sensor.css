@@ -1,0 +1,9 @@
+#color_sensor{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 230px;
+    left: 10px;
+    background-color: darkgray;
+    border-radius: 4px;
+}
