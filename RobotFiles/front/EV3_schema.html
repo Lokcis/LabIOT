@@ -1,94 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/EV3_styles.css" rel="stylesheet">
-        <link href="css/medium_motor_styles.css" rel="stylesheet">
-        <link href="css/touch_sensor_styles.css" rel="stylesheet">
-        <link href="css/color_sensor.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="ev3">
-            <div id="base_1">
-            </div>
-            <div id="line_remover">
-                <div id="return_button"></div>
-                <div id="screen_box">
-                    <div id="back_screen">
-                        <div id="screen"></div>
-                    </div>
-                </div>   
-                <div id="line_screen_to_buttons"></div>
-                <div id="back_buttons">
-                    <div id="vertical_buttons"></div>
-                    <div id="horizontal_buttons">
-                        <div id="left_button"></div>
-                        <div id="right_button"></div>
-                    </div>
-                    <div class="triangles">
-                        <div id="triangle_leftTop"></div>
-                        <div id="triangle_leftBottom"></div>
-                        <div id="triangle_rightTop"></div>
-                        <div id="triangle_rightBottom"></div>
-                    </div>
-                    <div id="center_button"></div>
-                    <div id="bottom_button">
-                        <div id="square_base1"></div>
-                        <div id="square_base2"></div>
-                        <div id="triangle_btn_rightBottom"></div>
-                        <div id="triangle_btn_leftBottom"></div>
-                        <div id="triangle_btn_rightTop"></div>
-                        <div id="triangle_btn_leftTop"></div>
-                        <div id="upline_right"></div>
-                        <div id="upline_left"></div>
-                    </div>
-                    <div id="top_button">
-                        <div id="square_base1"></div>
-                        <div id="square_base2"></div>
-                        <div id="triangle_btn_rightBottom"></div>
-                        <div id="triangle_btn_leftBottom"></div>
-                        <div id="triangle_btn_rightTop"></div>
-                        <div id="triangle_btn_leftTop"></div>
-                        <div id="upline_right"></div>
-                        <div id="upline_left"></div>
-                    </div>
-
-                </div>                                       
-            </div>
-            <div id="base_2"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/EV3_styles.css" rel="stylesheet" />
+    <link href="css/medium_motor_styles.css" rel="stylesheet" />
+    <link href="css/touch_sensor_styles.css" rel="stylesheet" />
+    <link href="css/color_sensor.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="ev3">
+      <div id="base_1"></div>
+      <div id="line_remover">
+        <div id="return_button"></div>
+        <div id="screen_box">
+          <div id="back_screen">
+            <div id="screen"></div>
+          </div>
         </div>
-        <div id="medium_motor">
-            <div id="medium_motor_horizontal" class="medium_motor_items medium_motor_lines">                    
-            </div>
-            <div id="medium_motor_vertical" class="medium_motor_items medium_motor_lines">
-                <div id="medium_motor_circle_top" class="medium_motor_circle"></div>
-                <div id="medium_motor_circle_bottom" class="medium_motor_circle"></div>                    
-            </div>
-            <div id="medium_motor_line_remover" class="medium_motor_items">
-                <div id="medium_motor_circle_left" class="medium_motor_circle"></div>
-                <div id="medium_motor_circle_right" class="medium_motor_circle"></div>
-                <div id="medium_motor_circle_red" class="medium_motor_circle">
-                    <div id="medium_motor_circle_red_horizontal_croix" class="medium_motor_circle_red_croix"></div>
-                    <div id="medium_motor_circle_red_vertical_croix" class="medium_motor_circle_red_croix"></div>                                       
-                </div>
-            </div>
+        <div id="line_screen_to_buttons"></div>
+        <div id="back_buttons">
+          <div id="vertical_buttons"></div>
+          <div id="horizontal_buttons">
+            <div id="left_button"></div>
+            <div id="right_button"></div>
+          </div>
+          <div class="triangles">
+            <div id="triangle_leftTop"></div>
+            <div id="triangle_leftBottom"></div>
+            <div id="triangle_rightTop"></div>
+            <div id="triangle_rightBottom"></div>
+          </div>
+          <div id="center_button"></div>
+          <div id="bottom_button">
+            <div id="square_base1"></div>
+            <div id="square_base2"></div>
+            <div id="triangle_btn_rightBottom"></div>
+            <div id="triangle_btn_leftBottom"></div>
+            <div id="triangle_btn_rightTop"></div>
+            <div id="triangle_btn_leftTop"></div>
+            <div id="upline_right"></div>
+            <div id="upline_left"></div>
+          </div>
+          <div id="top_button">
+            <div id="square_base1"></div>
+            <div id="square_base2"></div>
+            <div id="triangle_btn_rightBottom"></div>
+            <div id="triangle_btn_leftBottom"></div>
+            <div id="triangle_btn_rightTop"></div>
+            <div id="triangle_btn_leftTop"></div>
+            <div id="upline_right"></div>
+            <div id="upline_left"></div>
+          </div>
         </div>
-        <div id="touch_sensor">
-            <div id="touch_sensor_square_red">
-                <div id="touch_sensor_red_square_croix_vertical" class="touch_sensor_red_square_croix"></div>
-                <div id="touch_sensor_red_square_croix_horizontal" class="touch_sensor_red_square_croix"></div>
-            </div>
-            <div id="touch_sensor_corner_leftTop" class="touch_sensor_square_gray"></div>
-            <div id="touch_sensor_corner_rightTop" class="touch_sensor_square_gray"></div>
-            <div id="touch_sensor_corner_leftBottom" class="touch_sensor_square_gray"></div>
-            <div id="touch_sensor_corner_rightBottom" class="touch_sensor_square_gray"></div>            
+      </div>
+      <div id="base_2"></div>
+    </div>
+    <div id="medium_motor">
+      <div
+        id="medium_motor_horizontal"
+        class="medium_motor_items medium_motor_lines"
+      ></div>
+      <div
+        id="medium_motor_vertical"
+        class="medium_motor_items medium_motor_lines"
+      >
+        <div id="medium_motor_circle_top" class="medium_motor_circle"></div>
+        <div id="medium_motor_circle_bottom" class="medium_motor_circle"></div>
+      </div>
+      <div id="medium_motor_line_remover" class="medium_motor_items">
+        <div id="medium_motor_circle_left" class="medium_motor_circle"></div>
+        <div id="medium_motor_circle_right" class="medium_motor_circle"></div>
+        <div id="medium_motor_circle_red" class="medium_motor_circle">
+          <div
+            id="medium_motor_circle_red_horizontal_croix"
+            class="medium_motor_circle_red_croix"
+          ></div>
+          <div
+            id="medium_motor_circle_red_vertical_croix"
+            class="medium_motor_circle_red_croix"
+          ></div>
         </div>
-        <div id="color_sensor"></div>
-        <div id="infrared_sensor"></div>
-        <div id="infrared_beacon"></div>
-        <div id="large_motor"></div>
-        <script src="js/scripts.js"></script>
-        <script src="js/buttons.js"></script>
-    </body>
+      </div>
+    </div>
+    <div id="touch_sensor">
+      <div id="touch_sensor_square_red">
+        <div
+          id="touch_sensor_red_square_croix_vertical"
+          class="touch_sensor_red_square_croix"
+        ></div>
+        <div
+          id="touch_sensor_red_square_croix_horizontal"
+          class="touch_sensor_red_square_croix"
+        ></div>
+      </div>
+      <div
+        id="touch_sensor_corner_leftTop"
+        class="touch_sensor_square_gray"
+      ></div>
+      <div
+        id="touch_sensor_corner_rightTop"
+        class="touch_sensor_square_gray"
+      ></div>
+      <div
+        id="touch_sensor_corner_leftBottom"
+        class="touch_sensor_square_gray"
+      ></div>
+      <div
+        id="touch_sensor_corner_rightBottom"
+        class="touch_sensor_square_gray"
+      ></div>
+    </div>
+    <div id="color_sensor">
+      <div id="color_sensor_circle_red_big" class="color_sensor_circles"></div>
+      <div
+        id="color_sensor_circle_red_small"
+        class="color_sensor_circles"
+      ></div>
+      <div id="color_sensor_circle_black_big" class="color_sensor_circles">
+        <div id="color_sensor_circle_blue" class="color_sensor_circles">
+          <div
+            id="color_sensor_circle_white_big"
+            class="color_sensor_circles"
+          ></div>
+        </div>
+      </div>
+      <div id="color_sensor_circle_black_small" class="color_sensor_circles">
+        <div
+          id="color_sensor_circle_white_small"
+          class="color_sensor_circles"
+        ></div>
+      </div>
+    </div>
+    <div id="infrared_sensor">
+        <div id="infrared_sensor_left"></div>
+    </div>
+    <div id="infrared_beacon"></div>
+    <div id="large_motor"></div>
+    <script src="js/scripts.js"></script>
+    <script src="js/buttons.js"></script>
+  </body>
 </html>
