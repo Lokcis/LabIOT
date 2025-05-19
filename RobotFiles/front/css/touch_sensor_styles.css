@@ -1,68 +1,90 @@
-#touch_sensor{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 120px;
-    left: 10px;
-    background-color: darkgray;
-    border-radius: 4px;
+/* 
+  ESTILOS DEL SENSOR TÁCTIL EV3
+  =============================
+  Diseño CSS para el sensor táctil LEGO EV3 con:
+  - Marco gris oscuro
+  - Cuadrado rojo central
+  - Cruz negra interna
+  - Esquinas grises interactivas
+
+  Estructura visual:
+  1. Contenedor principal
+  2. Cuadrado rojo central con cruz
+  3. 4 esquinas grises
+*/
+
+/* Contenedor principal del sensor */
+#touch_sensor {
+  position: absolute;     /* Posicionamiento absoluto */
+  width: 100px;          /* Ancho fijo */
+  height: 100px;         /* Alto fijo */
+  top: 120px;            /* Posición desde arriba */
+  left: 10px;            /* Posición desde izquierda */
+  background-color: darkgray; /* Color base */
+  border-radius: 4px;    /* Bordes ligeramente redondeados */
 }
 
-.touch_sensor_square_gray{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: darkgray;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 4px;
+/* Esquinas grises (comparten estilo base) */
+.touch_sensor_square_gray {
+  position: absolute;
+  width: 40px;           /* Tamaño cuadrado */
+  height: 40px;
+  background-color: darkgray; /* Mismo color que el marco */
+  top: 50%;              /* Posicionamiento central base */
+  left: 50%;
+  transform: translate(-50%,-50%); /* Centrado preciso */
+  border-radius: 4px;    /* Bordes redondeados */
 }
 
+/* Posicionamiento individual de cada esquina */
 #touch_sensor_corner_leftTop {
-    top: 22%;
-    left: 22%;
+  top: 22%;              /* 22% desde arriba */
+  left: 22%;             /* 22% desde izquierda */
 }
 
 #touch_sensor_corner_rightTop {
-    top: 22%;
-    left: 78%;
+  top: 22%;
+  left: 78%;             /* 78% desde izquierda */
 }
 
 #touch_sensor_corner_leftBottom {
-    top: 78%;
-    left: 22%;
+  top: 78%;              /* 78% desde arriba */
+  left: 22%;
 }
 
 #touch_sensor_corner_rightBottom {
-    top: 78%;
-    left: 78%;
+  top: 78%;
+  left: 78%;
 }
 
-#touch_sensor_square_red{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80px;
-    height: 80px;
-    background-color: red;
-    transform: translate(-50%,-50%);
+/* Cuadrado rojo central */
+#touch_sensor_square_red {
+  position: absolute;
+  top: 50%;              /* Centrado vertical */
+  left: 50%;             /* Centrado horizontal */
+  width: 80px;           /* Ocupa 80% del contenedor */
+  height: 80px;
+  background-color: red; /* Color característico */
+  transform: translate(-50%,-50%); /* Centrado perfecto */
 }
 
-.touch_sensor_red_square_croix{
-    position: absolute;
-    background-color: rgb(12, 12, 12);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+/* Elementos de la cruz central (comparten estilo base) */
+.touch_sensor_red_square_croix {
+  position: absolute;
+  background-color: rgb(12, 12, 12); /* Negro oscuro */
+  top: 50%;              /* Centrado vertical */
+  left: 50%;             /* Centrado horizontal */
+  transform: translate(-50%,-50%); /* Ajuste fino */
 }
 
-#touch_sensor_red_square_croix_horizontal{
-    width: 5px;
-    height: 15px;
+/* Barra horizontal de la cruz */
+#touch_sensor_red_square_croix_horizontal {
+  width: 15px;           /* Longitud */
+  height: 5px;           /* Grosor */
 }
 
-#touch_sensor_red_square_croix_vertical{
-    width: 15px;
-    height: 5px;
+/* Barra vertical de la cruz */
+#touch_sensor_red_square_croix_vertical {
+  width: 5px;            /* Grosor */
+  height: 15px;          /* Longitud */
 }

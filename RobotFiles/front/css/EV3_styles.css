@@ -1,283 +1,316 @@
+/* 
+  ESTILOS PRINCIPALES DEL EV3 - SISTEMA COMPLETO
+  ==============================================
+  Este archivo contiene todos los estilos para el simulador LEGO EV3,
+  incluyendo la unidad central, pantalla, botones y componentes estructurales.
+
+  Estructura principal:
+  1. Configuración global del body
+  2. Base del EV3 y estructura general
+  3. Pantalla LCD y sus componentes
+  4. Sistema de botones (navegación y acción)
+  5. Elementos decorativos y auxiliares
+*/
+
+/* CONFIGURACIÓN GLOBAL */
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;                   /* Elimina márgenes por defecto */
+  height: 100vh;               /* Ocupa toda la altura visible */
+  display: flex;               /* Modelo de caja flexible */
+  justify-content: center;     /* Centrado horizontal */
+  align-items: center;         /* Centrado vertical */
+  position: relative;          /* Contexto para posicionamiento */
 }
 
-/* Base general */
+/* ESTRUCTURA BASE DEL EV3 */
 #ev3 {
-    width: 382px;
-    height: 586px;
-    background-color: transparent;
-    position: relative;
+  width: 382px;                /* Ancho total */
+  height: 586px;               /* Alto total */
+  background-color: transparent; /* Fondo transparente */
+  position: relative;          /* Contexto para elementos absolutos */
 }
 
-/* Bases */
-#base_1, #base_2 {
-    background-color: darkgray;
-    border: 1px solid gray;
-    position: absolute;
-    border-radius: 3%;
+/* BASES ESTRUCTURALES */
+#base_1,
+#base_2 {
+  background-color: darkgray;  /* Color base */
+  border: 1px solid gray;      /* Borde sutil */
+  position: absolute;          /* Posicionamiento preciso */
+  border-radius: 3%;           /* Esquinas redondeadas */
 }
 
 #base_1 {
-    width: 326px;
-    height: 578px;
-    top: 2px;
-    left: 26px;
+  width: 326px;                /* Ancho específico */
+  height: 578px;               /* Alto específico */
+  top: 2px;                    /* Posición desde arriba */
+  left: 26px;                  /* Posición desde izquierda */
 }
 
 #base_2 {
-    width: 372px;
-    height: 364px;
-    background-color: whitesmoke;
-    top: 100px;
-    left: 3px;
+  width: 372px;
+  height: 364px;
+  background-color: whitesmoke; /* Color diferente */
+  top: 100px;
+  left: 3px;
 }
 
-/* Fondo pantalla principal */
+/* PANTALLA LCD */
 #screen_box {
-    width: 326px;
-    height: 280px;
-    background-color: gray;
-    position: absolute;
-    border-radius: 3%;
-    top: 0px;
+  width: 326px;
+  height: 280px;
+  background-color: gray;      /* Marco de la pantalla */
+  position: absolute;
+  border-radius: 3%;
+  top: 0px;
 }
 
-/* Pantalla */
 #back_screen {
-    width: 274px;
-    height: 172px;
-    background-color: black;
-    position: absolute;
-    top: 45px;
-    left: 25px;
-    border-radius: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 274px;
+  height: 172px;
+  background-color: black;     /* Fondo de pantalla */
+  position: absolute;
+  top: 45px;
+  left: 25px;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;         /* Centrado de contenido */
 }
 
 #screen {
-    width: 230px;
-    height: 146px;
-    background-color: lightgreen;
-    opacity: 60%;
-    position: absolute;
-    border-radius: 2%;
+  width: 230px;
+  height: 146px;
+  background-color: lightgreen; /* Color de pantalla activa */
+  opacity: 60%;               /* Transparencia */
+  position: absolute;
+  border-radius: 2%;
 }
 
-/* Línea separadora */
+/* LÍNEA CONECTORA */
 #line_screen_to_buttons {
-    width: 11px;
-    height: 86px;
-    background-color: black;
-    position: absolute;
-    top: 217px;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 11px;
+  height: 86px;
+  background-color: black;     /* Color de conexión */
+  position: absolute;
+  top: 217px;
+  left: 50%;
+  transform: translateX(-50%); /* Centrado perfecto */
 }
 
-/* Botones principales */
+/* SISTEMA DE BOTONES */
 #back_buttons {
-    width: 224px;
-    height: 162px;
-    position: absolute;
-    top: 295px;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 224px;
+  height: 162px;
+  position: absolute;
+  top: 295px;
+  left: 50%;
+  transform: translateX(-50%); /* Centrado horizontal */
 }
 
-#vertical_buttons, #horizontal_buttons {
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#vertical_buttons,
+#horizontal_buttons {
+  background-color: black;     /* Color base de botones */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado perfecto */
 }
 
 #vertical_buttons {
-    width: 55px;
-    height: 100%;
+  width: 55px;
+  height: 100%;               /* Ocupa toda la altura */
 }
 
 #horizontal_buttons {
-    width: 100%;
-    height: 55px;
-    border-radius: 30px;
+  width: 100%;
+  height: 55px;
+  border-radius: 30px;        /* Forma ovalada */
 }
 
-/* Botón central */
+/* BOTÓN CENTRAL */
 #center_button {
-    width: 42px;
-    height: 42px;
-    background-color: gray;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  background-color: gray;     /* Color distintivo */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado perfecto */
 }
 
-/* Botones laterales */
-#left_button, #right_button {
-    width: 56px;
-    height: 42px;
-    background-color: darkgray;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+/* BOTONES LATERALES */
+#left_button,
+#right_button {
+  width: 56px;
+  height: 42px;
+  background-color: darkgray; /* Color de botones */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Alineación vertical */
 }
 
 #left_button {
-    border-radius: 30px 0 0 30px;
-    left: 7px;
+  border-radius: 30px 0 0 30px; /* Redondeo izquierdo */
+  left: 7px;
 }
 
 #right_button {
-    border-radius: 0 30px 30px 0;
-    left: 161px;
+  border-radius: 0 30px 30px 0; /* Redondeo derecho */
+  left: 161px;
 }
 
-/* Triángulos grandes */
-#triangle_leftTop, #triangle_leftBottom, #triangle_rightTop, #triangle_rightBottom {
-    position: absolute;
-}
-
-#triangle_leftTop {
-    border-left: 56px solid transparent;
-    border-bottom: 56px solid black;
-    left: 29px;
-}
-
-#triangle_leftBottom {
-    border-left: 56px solid transparent;
-    border-top: 56px solid black;
-    left: 29px;
-    top: 106px;
-}
-
-#triangle_rightTop {
-    border-right: 56px solid transparent;
-    border-bottom: 56px solid black;
-    left: 139px;
-}
-
+/* BOTONES TRIANGULARES (D-Pad) */
+#triangle_leftTop,
+#triangle_leftBottom,
+#triangle_rightTop,
 #triangle_rightBottom {
-    border-right: 56px solid transparent;
-    border-top: 56px solid black;
-    left: 139px;
-    top: 106px;
+  position: absolute;
 }
 
-/* Línea removedora */
+/* Triángulo superior izquierdo */
+#triangle_leftTop {
+  border-left: 56px solid transparent;
+  border-bottom: 56px solid black;
+  left: 29px;
+}
+
+/* Triángulo inferior izquierdo */
+#triangle_leftBottom {
+  border-left: 56px solid transparent;
+  border-top: 56px solid black;
+  left: 29px;
+  top: 106px;
+}
+
+/* Triángulo superior derecho */
+#triangle_rightTop {
+  border-right: 56px solid transparent;
+  border-bottom: 56px solid black;
+  left: 139px;
+}
+
+/* Triángulo inferior derecho */
+#triangle_rightBottom {
+  border-right: 56px solid transparent;
+  border-top: 56px solid black;
+  left: 139px;
+  top: 106px;
+}
+
+/* CAPA DE REMOCIÓN DE LÍNEAS */
 #line_remover {
-    width: 326px;
-    height: 520px;
-    background-color: whitesmoke;
-    position: absolute;
-    border-radius: 3%;
-    top: 3px;
-    left: 27px;
-    z-index: 3;
+  width: 326px;
+  height: 520px;
+  background-color: whitesmoke; /* Fondo claro */
+  position: absolute;
+  border-radius: 3%;
+  top: 3px;
+  left: 27px;
+  z-index: 3;                 /* Nivel de apilamiento */
 }
 
-/* Cuadrados base */
-#square_base1, #square_base2 {
-    position: absolute;
-    background-color: darkgray;
-    left: 50%;
-    transform: translateX(-50%);
+/* COMPONENTES DE BOTONES SUPERIORES/INFERIORES */
+#square_base1,
+#square_base2 {
+  position: absolute;
+  background-color: darkgray; /* Color de base */
+  left: 50%;
+  transform: translateX(-50%); /* Centrado horizontal */
 }
 
 #square_base1 {
-    height: 42px;
-    width: 50px;
-    top: 70%;
+  height: 42px;
+  width: 50px;
+  top: 70%;
 }
 
 #square_base2 {
-    height: 30px;
-    width: 74px;
-    top: 67%;
+  height: 30px;
+  width: 74px;
+  top: 67%;
 }
 
-/* Triángulos pequeños de botones */
-#triangle_btn_leftBottom, #triangle_btn_rightBottom, #triangle_btn_rightTop, #triangle_btn_leftTop {
-    position: absolute;
+/* TRIÁNGULOS PEQUEÑOS */
+#triangle_btn_leftBottom,
+#triangle_btn_rightBottom,
+#triangle_btn_rightTop,
+#triangle_btn_leftTop {
+  position: absolute;
 }
 
+/* Configuraciones específicas de cada triángulo pequeño */
 #triangle_btn_leftBottom {
-    border-right: 25px solid transparent;
-    border-top: 25px solid darkgray;
-    left: 137px;
-    top: 130px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid darkgray;
+  left: 137px;
+  top: 130px;
 }
 
 #triangle_btn_rightBottom {
-    border-left: 25px solid transparent;
-    border-top: 25px solid darkgray;
-    left: 62px;
-    top: 130px;
+  border-left: 25px solid transparent;
+  border-top: 25px solid darkgray;
+  left: 62px;
+  top: 130px;
 }
 
 #triangle_btn_rightTop {
-    border-bottom: 13px solid darkgray;
-    border-right: 13px solid transparent;
-    left: 149px;
-    top: 117px;
+  border-bottom: 13px solid darkgray;
+  border-right: 13px solid transparent;
+  left: 149px;
+  top: 117px;
 }
 
 #triangle_btn_leftTop {
-    border-bottom: 13px solid darkgray;
-    border-left: 13px solid transparent;
-    left: 62px;
-    top: 117px;
+  border-bottom: 13px solid darkgray;
+  border-left: 13px solid transparent;
+  left: 62px;
+  top: 117px;
 }
 
-/* Líneas verticales pequeñas */
-#upline_right, #upline_left {
-    width: 8px;
-    height: 24px;
-    background-color: darkgray;
-    position: absolute;
-    top: 85px;
+/* LÍNEAS VERTICALES DECORATIVAS */
+#upline_right,
+#upline_left {
+  width: 8px;
+  height: 24px;
+  background-color: darkgray; /* Color de acento */
+  position: absolute;
+  top: 85px;
 }
 
 #upline_right {
-    left: 141px;
+  left: 141px;
 }
 
 #upline_left {
-    left: 75px;
+  left: 75px;
 }
 
+/* BOTÓN SUPERIOR (ROTADO) */
 #top_button {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-    width: 224px;
-    height: 162px;
-    z-index: 5;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg); /* Rotación 180° */
+  width: 224px;
+  height: 162px;
+  z-index: 5;                 /* Nivel de apilamiento alto */
 }
 
-#return_button{
-    position: absolute;
-    width: 75px;
-    height: 40px;
-    top: 57%;
-    left: 18%;
-    transform: translate(-50%,-50%);
-    background-color: darkgray;
-    clip-path: polygon(
-    0 0,         /* top-left */
-    100% 0,      /* top-right */
-    100% 50%,    /* right before cut */
-    73% 100%,    /* inward cut */
-    0 100%       /* bottom-left */
+/* BOTÓN DE RETORNO */
+#return_button {
+  position: absolute;
+  width: 75px;
+  height: 40px;
+  top: 57%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  background-color: darkgray; /* Color de botón */
+  clip-path: polygon(
+    0 0,                      /* esquina superior izquierda */
+    100% 0,                   /* esquina superior derecha */
+    100% 50%,                 /* punto medio derecho */
+    73% 100%,                 /* corte diagonal interno */
+    0 100%                    /* esquina inferior izquierda */
   );
-   border-radius: 7px;
+  border-radius: 7px;         /* Suavizado de bordes */
 }
