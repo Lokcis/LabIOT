@@ -1,92 +1,127 @@
-#medium_motor{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 10px;
-    left: 10px;
-    background-color: darkgray;
-    border-radius: 4px;
+/* 
+  ESTILOS DEL MOTOR MEDIANO EV3
+  ============================
+  Este archivo CSS define la apariencia del motor mediano LEGO EV3,
+  incluyendo sus componentes estructurales y elementos decorativos.
+
+  Estructura visual:
+  1. Contenedor principal (medium_motor)
+  2. Barras horizontales/verticales
+  3. Círculos de conexión
+  4. Cruz central roja
+
+  Técnicas utilizadas:
+  - Posicionamiento absoluto para elementos anidados
+  - Transformaciones para centrado preciso
+  - Sombras para efecto de profundidad
+  - Sistema de capas mediante z-index implícito
+*/
+
+/* Contenedor principal del motor */
+#medium_motor {
+  position: absolute;     /* Posicionamiento absoluto respecto al body */
+  width: 100px;          /* Ancho fijo */
+  height: 100px;         /* Alto fijo */
+  top: 10px;             /* Posición vertical */
+  left: 10px;            /* Posición horizontal */
+  background-color: darkgray; /* Color base del motor */
+  border-radius: 4px;    /* Esquinas ligeramente redondeadas */
 }
 
-.medium_motor_lines{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+/* Estilo para las líneas estructurales */
+.medium_motor_lines {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para efecto 3D */
 }
 
-.medium_motor_items{    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: darkgray;
-    border-radius: 15px;
+/* Clase base para elementos del motor */
+.medium_motor_items {
+  position: absolute;    /* Posicionamiento absoluto dentro del contenedor */
+  top: 50%;              /* Centrado vertical */
+  left: 50%;             /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Ajuste fino de centrado */
+  background-color: darkgray; /* Color de los elementos */
+  border-radius: 15px;   /* Esquinas muy redondeadas */
 }
 
+/* Barra horizontal */
 #medium_motor_horizontal {
-    width: 100px;
-    height: 30px;
+  width: 100px;          /* Ancho completo */
+  height: 30px;          /* Grosor */
 }
 
+/* Barra vertical */
 #medium_motor_vertical {
-    width: 30px;
-    height: 100px;
+  width: 30px;           /* Grosor */
+  height: 100px;         /* Alto completo */
 }
 
-#medium_motor_line_remover{
-    width: 100px;
-    height: 30px;
+/* Contenedor de círculos */
+#medium_motor_line_remover {
+  width: 100px;          /* Mismo ancho que el contenedor */
+  height: 30px;          /* Altura reducida */
 }
 
+/* Estilo base para círculos */
 .medium_motor_circle {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: rgb(12, 12, 12);
-    border-radius: 50%;  /* Use 50% instead of 100% for circles */
-    transform: translate(-50%, -50%);
+  position: absolute;    /* Posicionamiento absoluto */
+  width: 25px;           /* Diámetro */
+  height: 25px;
+  background-color: rgb(12, 12, 12); /* Negro oscuro */
+  border-radius: 50%;    /* Forma circular perfecta */
+  transform: translate(-50%, -50%); /* Centrado preciso */
 }
 
-/* Horizontal alignment (left/right circles) */
+/* 
+  POSICIONAMIENTO DE CÍRCULOS
+  ---------------------------
+*/
+
+/* Círculos laterales (izquierdo/derecho) */
 #medium_motor_circle_left {
-    top: 50%;
-    left: 16%; 
+  top: 50%;              /* Centrado vertical */
+  left: 16%;             /* Posición horizontal izquierda */
 }
 
 #medium_motor_circle_right {
-    top: 50%;
-    left: 84%;
+  top: 50%;              /* Centrado vertical */
+  left: 84%;             /* Posición horizontal derecha */
 }
 
-/* Vertical alignment (top/bottom circles) */
+/* Círculos verticales (superior/inferior) */
 #medium_motor_circle_top {
-    left: 50%;
-    top: 16%;
+  left: 50%;             /* Centrado horizontal */
+  top: 16%;              /* Posición vertical superior */
 }
 
 #medium_motor_circle_bottom {
-    left: 50%;
-    top: 84%;
+  left: 50%;             /* Centrado horizontal */
+  top: 84%;              /* Posición vertical inferior */
 }
 
-#medium_motor_circle_red{
-    left: 50%;
-    top: 50%;
-    background-color: red;
+/* Círculo rojo central */
+#medium_motor_circle_red {
+  left: 50%;             /* Centrado horizontal perfecto */
+  top: 50%;              /* Centrado vertical perfecto */
+  background-color: red; /* Color distintivo */
 }
 
-.medium_motor_circle_red_croix{
-    position: absolute;
-    background-color: rgb(12, 12, 12);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+/* Estilo base para las líneas de la cruz */
+.medium_motor_circle_red_croix {
+  position: absolute;
+  background-color: rgb(12, 12, 12); /* Negro oscuro */
+  top: 50%;              /* Centrado vertical */
+  left: 50%;             /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Ajuste fino */
 }
 
-#medium_motor_circle_red_horizontal_croix{
-    width: 5px;
-    height: 15px;
+/* Línea horizontal de la cruz */
+#medium_motor_circle_red_horizontal_croix {
+  width: 15px;           /* Longitud */
+  height: 5px;           /* Grosor */
 }
 
-#medium_motor_circle_red_vertical_croix{
-    width: 15px;
-    height: 5px;
+/* Línea vertical de la cruz */
+#medium_motor_circle_red_vertical_croix {
+  width: 5px;            /* Grosor */
+  height: 15px;          /* Longitud */
 }

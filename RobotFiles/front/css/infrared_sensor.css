@@ -1,0 +1,76 @@
+/* 
+  ESTILOS DEL SENSOR INFRARROJO EV3
+  =================================
+  Diseño CSS para el sensor infrarrojo LEGO EV3 con:
+  - Dos lentes circulares negros
+  - Conector central
+  - Ojos rojos con efecto de gradiente
+
+  Estructura visual:
+  1. Contenedor principal rectangular
+  2. Dos lentes circulares (izquierdo/derecho)
+  3. Conector central
+  4. Ojos rojos con efecto de luz infrarroja
+*/
+
+/* Contenedor principal del sensor */
+#infrared_sensor {
+  position: absolute;     /* Posicionamiento absoluto */
+  height: 100px;         /* Alto del contenedor */
+  width: 200px;          /* Ancho del contenedor (doble que alto) */
+  top: 350px;            /* Posición desde arriba */
+  left: 10px;            /* Posición desde izquierda */
+}
+
+/* Estilo base para ambos lentes circulares */
+#infrared_sensor_circle_left,
+#infrared_sensor_circle_right {
+  position: absolute;     /* Posicionamiento absoluto */
+  border-radius: 50%;     /* Forma circular perfecta */
+  top: 50%;              /* Centrado vertical */
+  height: 95px;          /* Alto (95% del contenedor) */
+  width: 95px;           /* Ancho (95% del contenedor) */
+  background-color: black; /* Color negro característico */
+  transform: translate(0%, -50%); /* Ajuste vertical */
+}
+
+/* Posicionamiento específico para cada lente */
+#infrared_sensor_circle_left {
+  left: 0%;              /* Lente izquierdo pegado al borde */
+}
+
+#infrared_sensor_circle_right {
+  right: 0%;             /* Lente derecho pegado al borde */
+}
+
+/* Conector central entre los lentes */
+#infrared_sensor_union {
+  position: absolute;     /* Posicionamiento absoluto */
+  height: 80px;          /* Alto (80% del contenedor) */
+  width: 100px;          /* Ancho (mitad del contenedor) */
+  top: 2px;              /* Pequeño margen superior */
+  left: 50%;             /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajuste fino de centrado */
+  background-color: black; /* Mismo color que los lentes */
+}
+
+/* Estilo base para los "ojos" infrarrojos */
+#infrared_sensor_circle_left_redEye,
+#infrared_sensor_circle_right_redEye {
+  position: absolute;     /* Posicionamiento absoluto */
+  height: 3px;           /* Grosor fino */
+  width: 35px;           /* Longitud */
+  top: 50%;              /* Centrado vertical */
+  left: 50%;             /* Centrado horizontal */
+  transform: translate(-50%,-50%) skewX(-20deg); /* Inclinación diagonal */
+}
+
+/* Ojo izquierdo con gradiente hacia la derecha */
+#infrared_sensor_circle_left_redEye {
+  background: linear-gradient(to right, red 70%, transparent 100%);
+}
+
+/* Ojo derecho con gradiente hacia la izquierda */
+#infrared_sensor_circle_right_redEye {
+  background: linear-gradient(to left, red 70%, transparent 100%);
+}

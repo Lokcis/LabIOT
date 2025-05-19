@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
+  <!-- 
+  SIMULADOR LEGO EV3 - CÓDIGO COMPLETO
+  =====================================
+  Sistema completo que simula el ladrillo EV3 y sus componentes periféricos.
+  Todos los elementos interactúan entre sí mediante JavaScript.
+
+  Estructura:
+  1. Unidad central EV3 con pantalla y controles
+  2. Sensores (táctil, color, infrarrojo)
+  3. Actuadores (motores mediano y grande)
+  4. Beacon infrarrojo
+
+  Archivos dependientes:
+  - EV3_styles.css           → Estilos del ladrillo principal
+  - medium_motor_styles.css  → Estilos del motor mediano
+  - touch_sensor_styles.css  → Estilos del sensor táctil
+  - color_sensor.css         → Estilos del sensor de color
+  - infrared_sensor.css      → Estilos del sensor infrarrojo
+  - scripts.js               → Lógica principal
+  - buttons.js               → Control de interacción
+-->
   <head>
+    <!-- Configuración básica del documento -->
     <meta charset="utf-8" />
+    <!-- Ajuste para responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Hojas de estilo (orden importante) -->
+    <link href="css/color_sensor.css" rel="stylesheet" />
     <link href="css/EV3_styles.css" rel="stylesheet" />
+    <link href="./css/infrared_sensor.css" rel="stylesheet" />
     <link href="css/medium_motor_styles.css" rel="stylesheet" />
     <link href="css/touch_sensor_styles.css" rel="stylesheet" />
-    <link href="css/color_sensor.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- 
+    UNIDAD PRINCIPAL EV3 
+    Contiene:
+    - Base estructural (base_1, base_2)
+    - Pantalla LCD (screen)
+    - Sistema completo de botones
+  -->
     <div id="ev3">
+      <!-- Base inferior -->
       <div id="base_1"></div>
+
+      <!-- Contenedor principal de interfaz -->
       <div id="line_remover">
+        <!-- Botón de retorno -->
         <div id="return_button"></div>
+
+        <!-- Grupo de pantalla -->
         <div id="screen_box">
           <div id="back_screen">
+            <!-- Pantalla LCD principal -->
             <div id="screen"></div>
           </div>
         </div>
+
+        <!-- Conector visual -->
         <div id="line_screen_to_buttons"></div>
+
+        <!-- Grupo completo de botones -->
         <div id="back_buttons">
+          <!-- Botones verticales -->
           <div id="vertical_buttons"></div>
+
+          <!-- Botones horizontales -->
           <div id="horizontal_buttons">
             <div id="left_button"></div>
             <div id="right_button"></div>
           </div>
+
+          <!-- Botones direccionales (triangulares) -->
           <div class="triangles">
             <div id="triangle_leftTop"></div>
             <div id="triangle_leftBottom"></div>
             <div id="triangle_rightTop"></div>
             <div id="triangle_rightBottom"></div>
           </div>
+
+          <!-- Botón central -->
           <div id="center_button"></div>
+
+          <!-- Botón inferior -->
           <div id="bottom_button">
             <div id="square_base1"></div>
             <div id="square_base2"></div>
@@ -42,6 +95,8 @@
             <div id="upline_right"></div>
             <div id="upline_left"></div>
           </div>
+
+          <!-- Botón superior -->
           <div id="top_button">
             <div id="square_base1"></div>
             <div id="square_base2"></div>
@@ -54,13 +109,26 @@
           </div>
         </div>
       </div>
+
+      <!-- Base superior -->
       <div id="base_2"></div>
     </div>
+
+    <!-- 
+    MOTOR MEDIANO 
+    Componentes:
+    - Barras horizontales/verticales
+    - Círculos de conexión
+    - Cruz central roja
+  -->
     <div id="medium_motor">
+      <!-- Barra horizontal -->
       <div
         id="medium_motor_horizontal"
         class="medium_motor_items medium_motor_lines"
       ></div>
+
+      <!-- Barra vertical con círculos -->
       <div
         id="medium_motor_vertical"
         class="medium_motor_items medium_motor_lines"
@@ -68,9 +136,14 @@
         <div id="medium_motor_circle_top" class="medium_motor_circle"></div>
         <div id="medium_motor_circle_bottom" class="medium_motor_circle"></div>
       </div>
+
+      <!-- Contenedor de círculos laterales -->
       <div id="medium_motor_line_remover" class="medium_motor_items">
+        <!-- Círculos laterales -->
         <div id="medium_motor_circle_left" class="medium_motor_circle"></div>
         <div id="medium_motor_circle_right" class="medium_motor_circle"></div>
+
+        <!-- Círculo rojo central con cruz -->
         <div id="medium_motor_circle_red" class="medium_motor_circle">
           <div
             id="medium_motor_circle_red_horizontal_croix"
@@ -83,7 +156,15 @@
         </div>
       </div>
     </div>
+
+    <!-- 
+    SENSOR TÁCTIL 
+    Componentes:
+    - Cuadrado rojo central con cruz
+    - Esquinas grises
+  -->
     <div id="touch_sensor">
+      <!-- Cuadrado rojo central -->
       <div id="touch_sensor_square_red">
         <div
           id="touch_sensor_red_square_croix_vertical"
@@ -94,6 +175,8 @@
           class="touch_sensor_red_square_croix"
         ></div>
       </div>
+
+      <!-- Esquinas grises -->
       <div
         id="touch_sensor_corner_leftTop"
         class="touch_sensor_square_gray"
@@ -111,12 +194,25 @@
         class="touch_sensor_square_gray"
       ></div>
     </div>
+
+    <!-- 
+    SENSOR DE COLOR 
+    Componentes:
+    - Círculos rojos (grande y pequeño)
+    - Círculos negros con subcomponentes
+    - Círculos blancos internos
+  -->
     <div id="color_sensor">
+      <!-- Círculo rojo grande -->
       <div id="color_sensor_circle_red_big" class="color_sensor_circles"></div>
+
+      <!-- Círculo rojo pequeño -->
       <div
         id="color_sensor_circle_red_small"
         class="color_sensor_circles"
       ></div>
+
+      <!-- Círculo negro grande con subcomponentes -->
       <div id="color_sensor_circle_black_big" class="color_sensor_circles">
         <div id="color_sensor_circle_blue" class="color_sensor_circles">
           <div
@@ -125,6 +221,8 @@
           ></div>
         </div>
       </div>
+
+      <!-- Círculo negro pequeño con subcomponente -->
       <div id="color_sensor_circle_black_small" class="color_sensor_circles">
         <div
           id="color_sensor_circle_white_small"
@@ -132,12 +230,32 @@
         ></div>
       </div>
     </div>
+
+    <!-- 
+    SENSOR INFRARROJO 
+    Componentes:
+    - Círculo izquierdo (único elemento visible)
+  -->
     <div id="infrared_sensor">
-        <div id="infrared_sensor_left"></div>
+      <div id="infrared_sensor_union"></div>
+      <div id="infrared_sensor_circle_left">
+        <div id="infrared_sensor_circle_left_redEye"></div>
+      </div>
+      <div id="infrared_sensor_circle_right">
+        <div id="infrared_sensor_circle_right_redEye"></div>
+      </div>
     </div>
+
+    <!-- 
+    BEACON INFRARROJO 
+    (Elemento sin componentes internos visibles)
+  -->
     <div id="infrared_beacon"></div>
+
+    <!-- 
+    MOTOR GRANDE 
+    (Elemento sin componentes internos visibles)
+  -->
     <div id="large_motor"></div>
-    <script src="js/scripts.js"></script>
-    <script src="js/buttons.js"></script>
   </body>
 </html>

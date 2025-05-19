@@ -1,86 +1,132 @@
+/* 
+  ESTILOS DEL SENSOR DE COLOR EV3
+  ===============================
+
+  Este archivo CSS define la apariencia del sensor de color LEGO EV3,
+  incluyendo sus componentes circulares internos y su disposición espacial.
+
+  Estructura visual:
+  1. Contenedor principal (color_sensor)
+  2. Círculos rojos (grande y pequeño)
+  3. Círculos negros con subcomponentes
+  4. Círculos blancos internos
+
+  Técnicas utilizadas:
+  - Posicionamiento absoluto para elementos anidados
+  - Transformaciones para centrado preciso
+  - Sistema de capas mediante z-index implícito
+*/
+
+/* Contenedor principal del sensor */
 #color_sensor {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  top: 230px;
-  left: 10px;
-  background-color: darkgray;
-  border-radius: 4px;
+  position: absolute;     /* Posicionamiento absoluto respecto al body */
+  height: 100px;          /* Altura fija */
+  width: 100px;           /* Ancho fijo */
+  top: 230px;             /* Posición vertical */
+  left: 10px;             /* Posición horizontal */
+  background-color: darkgray; /* Color base del sensor */
+  border-radius: 4px;     /* Esquinas ligeramente redondeadas */
 }
 
+/* Clase base para todos los círculos del sensor */
 .color_sensor_circles {
-  border-radius: 50%;
-  position: absolute;
+  border-radius: 50%;     /* Forma circular perfecta */
+  position: absolute;     /* Posicionamiento absoluto dentro del contenedor */
 }
 
+/* 
+  CÍRCULOS ROJOS
+  --------------
+  - Dos tamaños (grande y pequeño)
+  - Posicionados en ejes verticales específicos
+*/
 #color_sensor_circle_red_big,
 #color_sensor_circle_red_small {
-  background-color: red;
+  background-color: red;  /* Color rojo característico */
 }
 
+/* Círculo rojo grande (superior) */
+#color_sensor_circle_red_big {
+  width: 50px;            /* Diámetro */
+  height: 50px;          
+  top: 28%;               /* Posición vertical (28% desde arriba) */
+  left: 50%;              /* Centrado horizontal */
+  transform: translate(-50%, -28%); /* Ajuste fino de centrado */
+}
+
+/* Círculo rojo pequeño (inferior) */
+#color_sensor_circle_red_small {
+  width: 30px;            /* Diámetro más pequeño */
+  height: 30px;
+  top: 70%;               /* Posición vertical (70% desde arriba) */
+  left: 50%;              /* Centrado horizontal */
+  transform: translate(-50%, -70%); /* Ajuste fino de centrado */
+}
+
+/* 
+  CÍRCULOS NEGROS
+  ---------------
+  - Contienen subcomponentes internos
+  - Tamaños diferentes al círculo rojo
+*/
 #color_sensor_circle_black_big,
 #color_sensor_circle_black_small {
-  background-color: black;
+  background-color: black; /* Color negro */
 }
 
-#color_sensor_circle_red_big {
-  width: 50px;
-  height: 50px;
-  top: 28%;
-  left: 50%;
-  transform: translate(-50%, -28%);
-}
-
-#color_sensor_circle_red_small {
-  width: 30px;
-  height: 30px;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -70%);
-}
-
+/* Círculo negro grande (contiene azul y blanco) */
 #color_sensor_circle_black_big {
-  width: 42px;
+  width: 42px;            /* Diámetro */
   height: 42px;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
+  top: 30%;               /* Posición vertical */
+  left: 50%;              /* Centrado horizontal */
+  transform: translate(-50%, -30%); /* Ajuste preciso */
 }
 
+/* Círculo negro pequeño (contiene blanco) */
 #color_sensor_circle_black_small {
-  width: 24px;
+  width: 24px;            /* Diámetro */
   height: 24px;
-  top: 68%;
-  left: 50%;
-  transform: translate(-50%, -68%);
+  top: 68%;               /* Posición vertical */
+  left: 50%;              /* Centrado horizontal */
+  transform: translate(-50%, -68%); /* Ajuste preciso */
 }
 
+/* 
+  SUBCOMPONENTES INTERNOS
+  ----------------------
+*/
+
+/* Círculo azul dentro del círculo negro grande */
 #color_sensor_circle_blue {
-  background-color: blue;
-  width: 25px;
+  background-color: blue;  /* Color azul */
+  width: 25px;             /* Diámetro */
   height: 25px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;                /* Centrado vertical */
+  left: 50%;               /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Centrado perfecto */
 }
 
+/* Círculos blancos (comparten propiedades) */
 #color_sensor_circle_white_big,
 #color_sensor_circle_white_small {
-  background-color: white;
+  background-color: white; /* Color blanco */
 }
 
-#color_sensor_circle_white_big{
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+/* Círculo blanco grande (dentro del azul) */
+#color_sensor_circle_white_big {
+  width: 10px;             /* Diámetro pequeño */
+  height: 10px;
+  top: 50%;                /* Centrado vertical */
+  left: 50%;               /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Centrado perfecto */
 }
 
-#color_sensor_circle_white_small{
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+/* Círculo blanco pequeño (dentro del negro pequeño) */
+#color_sensor_circle_white_small {
+  width: 10px;             /* Mismo tamaño que el grande */
+  height: 10px;
+  top: 50%;                /* Centrado vertical */
+  left: 50%;               /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Centrado perfecto */
 }
