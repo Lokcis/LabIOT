@@ -30,10 +30,10 @@
     <!-- Hojas de estilo (orden importante) -->
     <link href="css/color_sensor.css" rel="stylesheet" />
     <link href="css/EV3_styles.css" rel="stylesheet" />
-    <link href="./css/infrared_sensor.css" rel="stylesheet" />
-    <link href="css/medium_motor_styles.css" rel="stylesheet" />
-    <link href="css/touch_sensor_styles.css" rel="stylesheet" />
-  </head>
+    <link href="css/infrared_sensor.css" rel="stylesheet" />
+    <link href="css/medium_motor.css" rel="stylesheet" />
+    <link href="css/touch_sensor.css" rel="stylesheet" />
+    <link href="css/large_motor.css" rel="stylesheet"/>
   <body>
     <!-- 
     UNIDAD PRINCIPAL EV3 
@@ -234,28 +234,32 @@
     <!-- 
     SENSOR INFRARROJO 
     Componentes:
-    - Círculo izquierdo (único elemento visible)
-  -->
+    - Círculo izquierdo (único elemento visible) con LED rojo
+    - Círculo derecho (oculto) con LED rojo
+    - Elemento de unión
+-->
     <div id="infrared_sensor">
+      <!-- Conector/unión del sensor -->
       <div id="infrared_sensor_union"></div>
+
+      <!-- Círculo izquierdo visible con indicador LED -->
       <div id="infrared_sensor_circle_left">
         <div id="infrared_sensor_circle_left_redEye"></div>
       </div>
+
+      <!-- Círculo derecho oculto con indicador LED -->
       <div id="infrared_sensor_circle_right">
         <div id="infrared_sensor_circle_right_redEye"></div>
       </div>
     </div>
 
     <!-- 
-    BEACON INFRARROJO 
-    (Elemento sin componentes internos visibles)
-  -->
-    <div id="infrared_beacon"></div>
-
-    <!-- 
     MOTOR GRANDE 
     (Elemento sin componentes internos visibles)
   -->
-    <div id="large_motor"></div>
+    <div id="large_motor" class="object">
+      <div id="large_motor_base" class="object"></div>
+      <div id="large_motor_base2" class="object"></div>
+    </div>
   </body>
 </html>
