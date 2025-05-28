@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Laboratorio</title>
+</head>
+<body>
+    <h2>Registro de Entrada / Salida</h2>
+    <form method="POST">
+        <!-- Campo para ingresar el documento -->
+        <input type="text" name="documento" placeholder="Documento de identidad" required>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <!-- Mensaje de confirmación o error -->
+    <p>{{ mensaje }}</p>
+</body>
+</html>
