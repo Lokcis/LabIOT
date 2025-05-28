@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Usuario</title>
+</head>
+<body>
+    <h2>Registrar Nuevo Usuario</h2>
+    <form method="POST">
+        <input type="text" name="documento" placeholder="Documento de identidad" required><br><br>
+        <input type="text" name="codigo_u" placeholder="Código Universidad" required><br><br>
+        <input type="text" name="nombre" placeholder="Nombre completo" required><br><br>
+        <input type="email" name="correo" placeholder="Correo electrónico" required><br><br>
+        <input type="tel" name="telefono" placeholder="Teléfono" required><br><br>
+        
+        <label for="carrera">Carrera:</label><br>
+        <select name="carrera" id="carrera" required>
+            <option value="" disabled selected>Selecciona una carrera</option>
+            <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+            <option value="Mecatrónica">Mecatrónica</option>
+            <option value="Telecomunicaciones">Telecomunicaciones</option>
+        </select><br><br>
+        
+        <button type="submit">Registrar Usuario</button>
+    </form>
+    <p>{{ mensaje }}</p>
+    <p><a href="{{ url_for('index') }}">Volver a registro de entrada/salida</a></p>
+</body>
+</html>
